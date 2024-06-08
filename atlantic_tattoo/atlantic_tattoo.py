@@ -1,7 +1,9 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
-from views.header import header
+from views.home.header import header as home_header
+from views.home.about import about as home_about
+from views.home.services import services
 
 
 class State(rx.State):
@@ -12,7 +14,9 @@ class State(rx.State):
 
 def index() -> rx.Component:
     return rx.container(
-        header(),
+        home_header(),
+        home_about(),
+        services()
     )
 
 
