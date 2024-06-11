@@ -4,6 +4,8 @@ import reflex as rx
 from views.home.header import header as home_header
 from views.home.about import about as home_about
 from views.home.services import services
+from views.home.artists import artists
+from views.general.footer import footer
 
 
 class State(rx.State):
@@ -16,7 +18,9 @@ def index() -> rx.Component:
     return rx.container(
         home_header(),
         home_about(),
-        services()
+        services(),
+        artists(),
+        footer()
     )
 
 
