@@ -7,6 +7,9 @@ from views.home.services import services
 from views.home.artists import artists
 from views.general.footer import footer
 
+#Styles
+import styles.styles
+
 
 class State(rx.State):
     """The app state."""
@@ -44,5 +47,7 @@ def contact() -> rx.Component:
     pass
 
 
-app = rx.App()
+app = rx.App(
+    style=styles.styles.BASE_STYLE
+)
 app.add_page(index)
