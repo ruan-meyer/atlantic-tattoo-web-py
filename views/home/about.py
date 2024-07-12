@@ -16,5 +16,6 @@ def about() -> rx.Component:
         rx.vstack(
             rx.image(src="tattoo.jpg"),
             width="50%"
-        )
+        ),
+        background_color="black"
     )

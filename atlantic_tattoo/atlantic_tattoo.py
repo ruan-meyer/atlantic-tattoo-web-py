@@ -6,8 +6,6 @@ from views.home.about import about as home_about
 from views.home.services import services
 from views.home.artists import artists
 from views.general.footer import footer
-
-#Styles
 import styles.styles
 
 
@@ -18,7 +16,7 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.container(
+    return rx.box(
         home_header(),
         home_about(),
         services(),

@@ -1,33 +1,29 @@
-from typing import Tuple
-
 import reflex as rx
-from reflex.components.radix.themes.layout.stack import HStack
+from styles.constants import Size as Size
+from styles.constants import Color as Color
+
+
+def service(service_type: str) -> rx.Component:
+    return rx.flex(
+        rx.heading(service_type, as_="h2", align="center", font_size=Size.BIG, color=Color.SECONDARY),
+        rx.text("SERVICE", align="center", font_size=Size.LARGE, color=Color.DARK),
+        rx.center(
+            rx.button("See Artists", font_size=Size.DEFAULT)
+        ),
+        background="center/cover url('/tattoo.jpg')",
+        width="50%",
+        height="20em",
+        direction="column",
+        justify_content="center",
+    )
 
 
 def services() -> rx.Component:
     return rx.box(
         rx.heading("OUR SERVICES", align="center", as_="h2", width="100%"),
         rx.flex(
-            rx.flex(
-                rx.heading("TATTOO", as_="h2", align="center"),
-                rx.text("SERVICE", align="center"),
-                rx.center(
-                    rx.button("See Artists")
-                ),
-                background="center/cover url('/tattoo.jpg')",
-                width="50%",
-                direction="column"
-            ),
-            rx.flex(  # Mudei rx.heading para rx.vstack para centralizar verticalmente o texto.
-                rx.heading("PIERCINGS", as_="h2", align="center"),  # Adicionei align="center" para centralizar o texto.
-                rx.text("SERVICE", align="center"),
-                rx.center(
-                    rx.button("See Artists")
-                ),
-                background="center/cover url('/tattoo.jpg')",
-                width="50%",
-                direction="column"
-            ),
+            service(service_type="TATTOO"),
+            service(service_type="PIERCING"),
             width="100%",
         )
     )
