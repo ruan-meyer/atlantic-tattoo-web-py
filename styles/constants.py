@@ -9,6 +9,6 @@ class Color(Enum):
 class Size(Enum):
     VERY_SMALL = "0.3em"
     DEFAULT = '1em'
-    LARGE = "1.5em"
-    BIG = "2em"
-    VERY_BIG = "3em"
+    LARGE = "2em"
+    BIG = "3em"
+    VERY_BIG = "4em"

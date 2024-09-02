@@ -13,6 +13,6 @@ BASE_STYLE = {
         }
     },
     rx.link: {
-        "color": "blue",
+
     }
 }
